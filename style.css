@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Josefin+Sans:wght@300&family=Kalam&family=Shantell+Sans:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    color: rgb(238, 209, 209);
+}
+
+body{
+    font-family: 'Kalam', cursive;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    height: 100vh;
+    background: linear-gradient(90deg, rgb(0, 0, 0), rgb(34, 168, 204))
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 50vh;
+    width: 40vw;
+    /* border: 2px solid red; */
+}
+
+#date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+#clock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    /* display:inline-flex; */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 25vh;
+    width: 35vw;
+    margin: 2px auto;
+    padding: 3px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(49, 48, 48, 0);
+    border-radius: 20px;
+    box-shadow: 25px 0 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    /* white-space: nowrap; */
+    color: black;
+}
+
+.box1{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    border-radius: 7px;
+    background-image: linear-gradient(115deg, rgb(233, 17, 17), rgb(236, 234, 1));
+    z-index: -1;
+    animation: bounce 3s ease-in-out infinite;
+}
+
+.box2{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-image: linear-gradient(115deg, rgb(0, 255, 238), rgb(0, 235, 80));
+    border-radius: 7px;
+    animation: bounce 3s ease-in-out infinite;
+    animation-delay: -1.5s;
+}
+
+
+@keyframes bounce {
+    0%,100%{
+        transform: translateY(30px);
+    }
+    50%{
+        transform : translateY(-30px);
+    }
+}
+
+@media (max-width: 1535px){
+    .card{
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 1214px){
+    .card{
+        font-size: 2.8rem;
+    }
+    .box1{
+        height: 150px;
+        width: 150px;
+    }
+    .box2{
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media (max-width:400px){
+    .card{
+        width: 50vw;
+        height: 15vh;
+        font-size: 1.2rem;
+        padding: 40px 5px;
+        align-items: center;
+        text-align: center;
+    }
+    #clock{
+        text-align: center;
+
+    }
+    #date{
+        text-align: center;
+        
+    }
+    .box1{
+        width: 95px;
+        height: 95px;
+        left: -30px;
+    }
+    .box2{
+        width: 95px;
+        height: 95px;
+        right: -30px;
+    }
+}
